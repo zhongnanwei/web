@@ -1,0 +1,289 @@
+header {
+    width: 100%;
+
+    //tab中的版心，宽度与页面版心不一致
+    .tab-wrap {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .header {
+        height: 70px;
+        background-color: #242424;
+
+        h1.logo {
+            float: left;
+            display: block;
+            width: 160px;
+            height: 70px;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url(../image/topbar.png) 0 0;
+            }
+        }
+
+        ul {
+            margin-left: 20px;
+            height: 70px;
+            float: left;
+            display: flex;
+            width: 508px;
+
+            li {
+                flex: 1;
+
+                a {
+                    display: block;
+                    color: #fff;
+                    font-size: 14px;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 70px;
+                }
+
+            }
+        }
+
+        .search {
+            float: left;
+            margin-left: 60px;
+            width: 158px;
+            height: 32px;
+            background-color: #fff;
+            border-radius: 16px;
+            margin-top: 19px;
+            line-height: 32px;
+            padding-left: 30px;
+            color: #9b9b9b;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                width: 14px;
+                height: 16px;
+                background: url(../image/topbar.png)-9px -107px;
+            }
+        }
+
+        .creator {
+            display: block;
+            float: left;
+            width: 90px;
+            height: 33px;
+            border: 1px solid #4F4F4F;
+            text-align: center;
+            color: #ccc;
+            line-height: 33px;
+            border-radius: 20px;
+            margin: 19px 0 0 12px;
+        }
+
+        .login {
+            display: block;
+            float: right;
+            margin-right: 40px;
+            width: 28px;
+            margin-top: 26px;
+            color: #787878;
+        }
+
+    }
+
+    //火爆
+    .hot {
+        position: relative;
+
+        &::after {
+            content: '';
+            top: 22px;
+            left: 88px;
+            width: 28px;
+            height: 14px;
+            position: absolute;
+            background: url(../image/topbar.png)-191px 0;
+        }
+    }
+
+    .tab {
+        height: 35px;
+        background-color: #c20c0c;
+
+        ul {
+            padding-left: 180px;
+            width: 744px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                flex: 1;
+
+                a {
+                    display: block;
+                    color: #fff;
+                    width: 50px;
+                    height: 20px;
+                    text-align: center;
+                    margin: 7px auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //R字符
+    .r {
+        position: relative;
+
+        &::after {
+            content: '';
+            top: 2px;
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            background: url(../image/white-r-icon@3x.png) center/8px no-repeat;
+        }
+    }
+
+}
+
+//版心
+.wrap {
+    width: 982px;
+    margin: 0 auto;
+}
+
+.list-header {
+    height: 33px;
+    padding: 0 10px 0 34px;
+    background-position: -225px -156px;
+    border-bottom: 2px solid #C10D0C;
+    position: relative;
+
+    i {
+        position: absolute;
+        top: 7px;
+        left: 5px;
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: url(../image/index.png) -234px -163px ~'/'413px 465px;
+    }
+
+    a {
+        float: left;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 28px;
+    }
+
+    span {
+        float: right;
+        color: #666;
+        margin-top: 9px;
+        margin-right: 12px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 32px;
+            display: block;
+            width: 13px;
+            height: 13px;
+            background: url(../image/index.png) 0 -240px ~'/'413px 465px;
+        }
+
+    }
+}
+
+//底部
+footer {
+    width: 100%;
+    height: 172px;
+    overflow: hidden;
+    border-top: 1px solid #d3d3d3;
+    background: #f2f2f2;
+
+    .text {
+        float: left;
+
+        .line {
+            height: 24px;
+            line-height: 24px;
+
+            li {
+                margin: 0 8px 0 10px;
+                float: left;
+                color: #c2c2c2;
+
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+
+                a {
+                    color: #999;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        p {
+            line-height: 24px;
+            position: relative;
+
+            a {
+                color: #666;
+            }
+
+            i {
+                position: absolute;
+                display: block;
+                top: 5px;
+                left: 308px;
+                width: 14px;
+                height: 14px;
+                background: url(../image/police.png) center/14px no-repeat;
+            }
+        }
+    }
+
+    .other_logo {
+        width: 420px;
+        margin-top: 33px;
+        float: right;
+
+        ul {
+            display: flex;
+
+            li {
+                flex: 1;
+                margin-left: 30px;
+                height: 70px;
+
+                a {
+                    display: block;
+                    width: 50px;
+                    height: 45px;
+                    margin: 0 auto;
+                    background: url(../image/foot_enter_new.png) -59px -451px ~'/'104px 545px no-repeat;
+                }
+
+                span {
+                    display: block;
+                    width: 72px;
+                    height: 14px;
+                    margin: 0 auto;
+                    background: url(../image/foot_enter_tt.png) 0 -118px ~'/'170px 153px no-repeat;
+                }
+            }
+        }
+    }
+}
