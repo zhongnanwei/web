@@ -429,19 +429,53 @@ header .download .download-pc:hover {
   height: 126px;
   background: url(../image/index.png) 0 0;
 }
-.aside .login-tip {
+.aside .login .login-tip {
+  margin: 30px auto;
   width: 205px;
-  height: 75px;
+  height: 35px;
   text-align: center;
 }
-.aside a {
+.aside .login a {
+  margin: 0 auto;
   display: block;
   width: 100px;
   height: 31px;
   line-height: 31px;
   text-align: center;
   color: #fff;
+  background-color: #c70b12;
   text-shadow: 0 1px 0 #8a060b;
+  border-radius: 5px;
+}
+.aside .singer .singer_header {
+  height: 23px;
+  margin: 0 20px;
+  border-bottom: 1px solid #ccc;
+  margin-top: 15px;
+}
+.aside .singer .singer_header h3 {
+  float: left;
+  font-size: 12px;
+}
+.aside .singer .singer_header a {
+  float: right;
+}
+.aside .singer ul {
+  margin: 6px 0 14px 20px;
+}
+.aside .singer ul li {
+  margin-top: 14px;
+  width: 210px;
+  height: 62px;
+  background: #fafafa;
+}
+.aside .singer ul li img {
+  float: left;
+  width: 62px;
+  height: 62px;
+}
+.aside .singer ul li p {
+  margin-top: 8px;
 }
 .list-header {
   height: 33px;
