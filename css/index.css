@@ -142,7 +142,7 @@ header .banner .banner-wrap {
   width: 982px;
   position: absolute;
   top: 0;
-  left: 300px;
+  left: 269px;
 }
 header .banner .banner-wrap .small-banner-wrap {
   float: left;
@@ -177,6 +177,7 @@ header .download .download-pc:hover {
   width: 982px;
   margin: 0 auto;
   background-color: #fff;
+  border: 1px solid #ccc;
 }
 .wrap .main {
   float: left;
@@ -419,9 +420,28 @@ header .download .download-pc:hover {
 }
 .aside {
   float: left;
-  width: 251px;
+  width: 249px;
+  border-left: 1px solid rgba(204, 204, 204, 0.801);
   margin-left: 1px;
   min-height: 700px;
+}
+.aside .login {
+  height: 126px;
+  background: url(../image/index.png) 0 0;
+}
+.aside .login-tip {
+  width: 205px;
+  height: 75px;
+  text-align: center;
+}
+.aside a {
+  display: block;
+  width: 100px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 0 #8a060b;
 }
 .list-header {
   height: 33px;

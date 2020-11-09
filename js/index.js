@@ -17,9 +17,7 @@ $(function () {
     newestSecond: $('#newest-second'),
     newestThird: $('#newest-third'),
   })
-  new topList({
-
-  })
+  new topList()
   //新碟上架轮播(采用原生定时器写法)
   //设置初始页面
   let indexPage = 1;
@@ -35,7 +33,6 @@ $(function () {
     // 3.3 动画效果
     animateMove(content, -indexPage * 645, 'left');
   });
-
   // 2.给向右的箭头：right绑定点击事件onclick
   $('.next').click(function () {
     if (indexPage == content.children.length - 1) {
@@ -81,10 +78,10 @@ banner.prototype = {
     var _self = this;
     _data.forEach(item => {
       $('<div>').addClass('swiper-slide').html(function () {
-          $('<img>')
-            .attr('src', item.imageUrl) //相当于_d.banners[i].imageUrl，获取banner中的imageUrl
-            .appendTo($(this));
-        })
+        $('<img>')
+          .attr('src', item.imageUrl) //相当于_d.banners[i].imageUrl，获取banner中的imageUrl
+          .appendTo($(this));
+      })
         .appendTo(_self.swiperWrapper);
     });
   },
@@ -92,15 +89,14 @@ banner.prototype = {
     var _self = this;
     _data.forEach(item => {
       $('<div>').addClass('swiper-slide').html(function () {
-          $('<img>')
-            .attr('src', item.imageUrl + '?imageView&blur=40x20') //_d.banners[0].imageUrl
-            .appendTo($(this));
-        })
+        $('<img>')
+          .attr('src', item.imageUrl + '?imageView&blur=40x20') //_d.banners[0].imageUrl
+          .appendTo($(this));
+      })
         .appendTo(_self.swiperBlurWrapper);
     });
   }
 }
-
 //热门推荐模块
 //构造器，首字母大写
 function index(_obj) {
@@ -111,7 +107,6 @@ function index(_obj) {
   //调用init方法
   this.init();
 }
-
 //使用prototype原型模式，添加方法
 index.prototype = {
   //修复原型链
@@ -152,9 +147,7 @@ index.prototype = {
     }
   }
 }
-
 //新歌上架模块
-//构造器，首字母大写
 function newest(_obj) {
   //动态添加属性
   for (var i in _obj) {
@@ -199,7 +192,6 @@ newest.prototype = {
     }).appendTo(newest);
   }
 }
-
 //首页榜单
 function topList(_obj) {
   //动态添加属性
@@ -222,7 +214,8 @@ topList.prototype = {
     //封装的ajax函数
     ajaxFn(URL.toplist, function (_d) {
       for (let i = 0; i < 3; i++) {
-        const renderReuslt = template('topListTemplate', _d.list[i].tracks);
+        const renderReuslt = template('topListTemplate', _d.list[i]);
+        console.log(_d.list[i]);
         $('#block' + i).html(renderReuslt);
       }
     })
