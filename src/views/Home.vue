@@ -15,6 +15,7 @@
           </li>
         </ul>
         <Title title="最新音乐"></Title>
+        <Music></Music>
         <!-- http://localhost:3000/personalized/newsong -->
       </van-tab>
       <van-tab title="热歌榜">热歌榜</van-tab>
@@ -25,9 +26,11 @@
 
 <script>
 import Title from "../components/title.vue";
+import Music from "../components/music.vue";
 export default {
   components: {
     Title,
+    Music,
   },
   data() {
     return {
@@ -42,8 +45,10 @@ export default {
       if (res.status === 200) {
         this.personalized = res.data.result;
         this.personalized.forEach((song) => {
+          if (song.playCount > 100000000)
+            song.playCount = Math.floor(song.playCount / 10000000) / 10 + "亿";
           if (song.playCount > 10000)
-            song.playCount = Math.floor(song.playCount / 10000) + "万";
+            song.playCount = Math.floor(song.playCount / 1000) / 10 + "万";
         });
       }
     });
