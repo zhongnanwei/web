@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <div class="message">
-      <p>APPLE</p>
-      <span>杨飞机</span>
+      <p>{{ message.name }}</p>
+      <span>{{ message.song.artists[0].name }} - {{ message.name }}</span>
     </div>
     <div class="play">
       <span class="iconfont iconshipin"></span>
@@ -11,7 +11,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["message"],
+};
 </script>
 
 <style lang="less" scoped>
